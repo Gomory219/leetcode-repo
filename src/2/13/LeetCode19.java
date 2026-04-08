@@ -5,17 +5,21 @@ public class LeetCode19 {
 
     static class Solution {
         public ListNode removeNthFromEnd(ListNode head, int n) {
-            ListNode target = head, pre = null,cur = head;
+            ListNode target = head, pre = null, cur = head;
             int len = 0;
             while (cur != null) {
                 len++;
                 cur = cur.next;
             }
             for (int i = 1; i <= len - n; i++) {
-                if (i == len - n - 1) {
+                if (i == len - n) {
                     pre = target;
                 }
                 target = target.next;
+            }
+            if (pre == null) {
+                head = head.next;
+                return head;
             }
             pre.next = target.next;
             return head;
