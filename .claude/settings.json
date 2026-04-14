@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xxd \"c:/Users/Redmi/Desktop/CODE/SXU/leetcode-repo/src/4/10/Hello.java\")"
+    ]
+  }
+}
